@@ -1,1 +1,1 @@
-# magazine-layout
+# blog-layout
