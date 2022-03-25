@@ -1,0 +1,184 @@
+/*GLOBAL*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.50%;
+    line-height: 1;
+}
+
+body {
+    font-family: 'Open Sans', 'sans-serif';
+    font-size: 1.6rem;
+    color: #222;
+}
+
+/*GENERAL*/
+
+.container {
+    padding: 0 3.2rem;
+    margin: 0 auto;
+    max-width: 135rem;
+}
+
+.logo {
+    display: block;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700; 
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.nav-link:link, .nav-link:visited {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-link:hover, .nav-link:active {
+    color: #e63946;
+}
+
+.search {
+    cursor: pointer;
+}
+
+.search-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+}
+
+h2 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 4.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.grid {
+    display: grid;
+    gap: 3.2rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/*HEADER*/
+
+.header {
+    background-color: #eee;
+}
+
+/**NAV**/
+
+/***TOP NAV***/
+
+.top-nav {
+    padding: 1.2rem 0;
+    background-color: #ddd;
+}
+
+.top-nav .nav-menu {
+    justify-content: flex-end;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.top-nav .nav-link:hover, 
+.top-nav .nav-link:active {
+    color: #457b9d;
+}
+
+/****MAIN NAV****/
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 3.2rem;
+    background-color: #eee;
+}
+
+.main-nav .nav-link:link, .main-nav .nav-link:visited {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/*MAIN CONTENT*/
+
+/**SECTIONS**/
+
+.section  {
+    padding: 3.2rem 0;
+}
+
+.section--dark {
+    background-color: #222;
+    color: #fff;
+}
+
+.section-heading h1 {
+    padding: 0 0 3.2rem;
+}
+
+.section .section-heading {
+    grid-column: span 3;
+}
+
+.section--dark .section-heading {
+    grid-column: span 4;
+}
+
+.section .articles {
+    grid-column: span 2;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.article-img {
+    background-color: #ddd;
+    width: 100%;
+    height: 25rem;
+}
+
+.article-title span {
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.sidebar {
+    background-color: #ddd;
+}
