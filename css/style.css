@@ -25,12 +25,18 @@ body {
     max-width: 135rem;
 }
 
-.logo {
-    display: block;
+.logo a:link, .logo a:visited {
     font-size: 3.2rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700; 
+    font-weight: 700;
+    min-width: 25%;
+    text-align: center;
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.logo a:hover, .logo a:active {
+    color: #fff;
 }
 
 .nav-menu {
@@ -38,15 +44,31 @@ body {
     display: flex;
     align-items: center;
     gap: 3.2rem;
+    min-width: 33.33%;
 }
 
 .nav-link:link, .nav-link:visited {
-    color: inherit;
+    color: #f2f2f2;
     text-decoration: none;
+    font-weight: 600;
+    font-size: 1.6rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
 }
 
 .nav-link:hover, .nav-link:active {
-    color: #e63946;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+.nav-link-icon:link,
+.nav-link-icon:visited {
+    color: #f2f2f2;
+}
+
+.nav-link-icon:hover,
+.nav-link-icon:active {
+    color: #fff;
 }
 
 .search {
@@ -72,113 +94,245 @@ h1 {
     text-transform: uppercase;
 }
 
-.grid {
-    display: grid;
-    gap: 3.2rem;
-}
-
-.grid--2-cols {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.grid--3-cols {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.grid--4-cols {
-    grid-template-columns: repeat(4, 1fr);
+ion-icon:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 /*HEADER*/
 
 .header {
-    background-color: #eee;
+    background-color: #000;
 }
 
 /**NAV**/
 
-/***TOP NAV***/
-
-.top-nav {
-    padding: 1.2rem 0;
-    background-color: #ddd;
-}
-
-.top-nav .nav-menu {
-    justify-content: flex-end;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
-
-.top-nav .nav-link:hover, 
-.top-nav .nav-link:active {
-    color: #457b9d;
-}
-
-/****MAIN NAV****/
+/*MAIN NAV*/
 
 .main-nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 1.2rem 3.2rem;
-    background-color: #eee;
+    padding: 1.6rem 3.2rem;
+    background-color: #000;
 }
 
-.main-nav .nav-link:link, .main-nav .nav-link:visited {
-    font-size: 1.6rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px;
+.nav-menu--primary {
+    justify-content: flex-start;
+}
+
+.nav-menu--secondary {
+    justify-content: flex-end;
+    gap: 1.2rem;
+}
+
+.nav-link--trending {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #fff;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.nav-menu--primary .nav-icon,
+.nav-menu--secondary .nav-icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    cursor: pointer;
+}
+
+
+
+/**SECONDARY NAV**/
+
+.secondary-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.6rem 3.2rem;
+    background-color: #000;
+    border-top: 1px solid #212121;
 }
 
 /*MAIN CONTENT*/
 
 /**SECTIONS**/
 
+/***LIGHT***/
+
 .section  {
     padding: 3.2rem 0;
 }
+
+.section-heading {
+    padding: 0 0 3.2rem;
+}
+
+.articles {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 3.2rem;
+    row-gap: 6.4rem;
+}
+
+.article-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.article-img img {
+    background-color: #ccc;
+    width: 100%;
+    border-radius: 0.4rem;
+}
+
+.article-meta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2.4rem;
+}
+
+.article-meta a:link, 
+.article-meta a:visited {
+    text-decoration: none;
+    transition: all 0.3s;
+    font-weight: 600;
+    color: rgba(34, 34, 34, 0.6);
+}
+
+.article-meta a:hover, 
+.article-meta a:active {
+    color: #222;
+}
+
+.article-date {
+    color: rgba(34, 34, 34, 0.6);
+    font-weight: 600;
+}
+
+.article-cat {
+    position: relative;
+}
+
+.article-cat::after {
+    content: "";
+    border-right: 1px solid rgba(34, 34, 34, 0.6);
+    height: 100%;
+    position: absolute;
+    margin-left: 1.2rem;
+}
+
+.article-text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.article-title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.article-title a:link, 
+.article-title a:visited {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s;
+}
+
+.article-title a:hover, 
+.article-title a:active {
+    color: rgba(34, 34, 34, 0.6);
+}
+
+.article-text {
+    line-height: 1.5;
+}
+
+/****LIGHT GREY****/
+
+.section--light-grey {
+    background-color: #eee;
+}
+
+/****DARK****/
 
 .section--dark {
     background-color: #222;
     color: #fff;
 }
 
-.section-heading h1 {
-    padding: 0 0 3.2rem;
+.section--dark .article-meta a:link, 
+.section--dark .article-meta a:visited {
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.section .section-heading {
-    grid-column: span 3;
+.section--dark .article-meta a:hover, 
+.section--dark .article-meta a:active {
+    color: #fff;
 }
 
-.section--dark .section-heading {
-    grid-column: span 4;
+.section--dark .article-meta p {
+    color: rgba(255, 255, 255, 0.6);
 }
 
-.section .articles {
-    grid-column: span 2;
+.section--dark .article-meta span::after {
+    border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
 
-.article-content {
+/*FOOTER*/
+
+.footer {
     display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    padding: 3.2rem 0 3.2rem;
 }
 
-.article-img {
-    background-color: #ddd;
-    width: 100%;
-    height: 25rem;
+.footer-text {
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
 }
 
-.article-title span {
-    font-size: 2.4rem;
-    font-weight: 600;
-    line-height: 1.3;
+.footer-text a:link, .footer-text a:visited {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
 }
 
-.sidebar {
-    background-color: #ddd;
+.footer-text a:hover, .footer-text a:active {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1120px) {
+    .articles {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .secondary-nav {
+        display: none;
+    }
+}
+
+@media (max-width: 585px) {
+    .articles {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
