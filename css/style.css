@@ -64,7 +64,7 @@
   /*HEADER*/
   
   .header {
-    background: #000;
+    background: linear-gradient(to right, #a01a58, #5c4d7d);
   }
   
   /**NAV**/
@@ -127,9 +127,21 @@
         gap: 4rem;
       }
       
+      .about-img-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to right, #a01a58, #5c4d7d, #fff);
+        border-radius: 50%;
+        z-index: -1;
+        padding: 0.8rem;
+      }
+
       .about-img {
         width: 100%;
         border-radius: 50%;
+        background: #fff;
+        padding: 0.8rem;
     }
       
       .about-text-box {
@@ -321,7 +333,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #000;
+    background: linear-gradient(to right, #a01a58, #5c4d7d);
     padding: 2rem 0;
   }
   
