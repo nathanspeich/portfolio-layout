@@ -134,14 +134,13 @@
         background: linear-gradient(to right, #a01a58, #5c4d7d, #fff);
         border-radius: 50%;
         z-index: -1;
-        padding: 0.8rem;
+        padding-top: 0.8rem;
+        padding-bottom: 0.1rem;
       }
 
       .about-img {
         width: 100%;
         border-radius: 50%;
-        background: #fff;
-        padding: 0.8rem;
     }
       
       .about-text-box {
